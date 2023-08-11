@@ -1,13 +1,13 @@
 import { cn } from "@/lib/utils"
 import { MouseEventHandler } from "react";
 
-interface IconButtonProps {
+interface IconButtonCartProps {
     onClick?: MouseEventHandler<HTMLButtonElement> | undefined;
     icon: React.ReactElement;
     className?: string;
 }
 
-const IconButton: React.FC<IconButtonProps> = ({
+const IconButtonCart: React.FC<IconButtonCartProps> = ({
     onClick,
     icon,
     className
@@ -16,7 +16,7 @@ const IconButton: React.FC<IconButtonProps> = ({
     <button
         onClick={onClick}
         className={cn(
-            "rounded-full flex items-center justify-center bg-white shadow-md p-2 hover:scale-110 transition",
+            "rounded-full flex items-center justify-center shadow-md p-2 hover:scale-110 transition",
             className
         )}
     >
@@ -25,4 +25,4 @@ const IconButton: React.FC<IconButtonProps> = ({
   )
 }
 
-export default IconButton;
+export default IconButtonCart;

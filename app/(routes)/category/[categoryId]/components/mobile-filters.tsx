@@ -5,8 +5,8 @@ import { Plus, X } from "lucide-react";
 import { Dialog } from "@headlessui/react";
 
 import { Color, Size } from "@/types";
-import Button from "@/components/ui/button";
-import IconButton from "@/components/ui/icon-button";
+import Button from "@/components/button";
+import IconButtonCart from "@/components/ui/icon-button-cart";
 
 import Filter from "./filter";
 
@@ -39,10 +39,10 @@ const MobileFilters: React.FC<MobileFiltersProps> = ({
             {/*DIALOG POSITION*/}
             <div className="fixed inset-0 z-40 flex">
                 <Dialog.Panel className="relative ml-auto flex h-full w-full
-                max-w-xs flex-col overflow-y-auto bg-white py-4 pb-6 shadow-xl">
+                max-w-xs flex-col overflow-y-auto bg-white text-black py-4 pb-6 shadow-xl">
                     {/*CLOSE BUTTON*/}
                     <div className="flex items-center justify-end px-4">
-                        <IconButton icon={<X size={15} onClick={onClose} />} />
+                        <IconButtonCart icon={<X size={15} onClick={onClose} />} />
                     </div>
                     {/*RENDER THE FILTERS*/}
                     <div className="p-4">
@@ -54,7 +54,7 @@ const MobileFilters: React.FC<MobileFiltersProps> = ({
                          <Filter
                             valueKey="colorId"
                             name="Colors"
-                            data={colors}
+                            data={colors}                            
                         />
                     </div>
                 </Dialog.Panel>

@@ -5,7 +5,7 @@ import qs from "query-string";
 import { useRouter, useSearchParams } from "next/navigation";
 
 import { Color, Size } from "@/types";
-import Button from "@/components/ui/button";
+import Button from "@/components/button";
 import { cn } from "@/lib/utils";
 
 interface FilterProps {
@@ -56,8 +56,8 @@ const Filter: React.FC<FilterProps> = ({
                 <div key={filter.id} className="flex items-center">
                     <Button
                         className={cn(
-                            "rounded-md text-sm text-gray-800 p-2 bg-white border border-gray300",
-                            selectedValue === filter.id && "bg-black text-white" 
+                            "rounded-md text-sm p-2 border",
+                            selectedValue === filter.id && "bg-gray-500 text-white" 
                         )}
                         onClick={() => onClick(filter.id)}
                     >
