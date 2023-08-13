@@ -5,6 +5,8 @@ import MainNav from "@/components/main-nav";
 import NavbarActions from "@/components/navbar-actions";
 import getCategories from "@/actions/get-categories";
 
+import MobileNav from "@/components/mobile-nav";
+
 export const revalidate = 0;
 
 const Navbar = async () => {
@@ -20,6 +22,9 @@ const Navbar = async () => {
                         AMSTORE
                     </p>
                 </Link>
+
+                <MobileNav data={categories}/>
+                   
                 <MainNav data={categories}/>
                 <NavbarActions />
             </div>            
