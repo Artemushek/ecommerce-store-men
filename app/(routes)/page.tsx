@@ -8,10 +8,8 @@ export const revalidate = 0;
 
 const HomePage = async () => {
 
-  const products = await getProducts({ isFeatured: true });
-  //const billboard = await getBillboard("5824e128-7b2f-4bfa-8000-2ba57d1c25e0");
-  //const billboard = await getBillboard("feb0b3e1-cb3c-4928-ac1b-06106bdcc870");
-  const billboard = await getBillboard("d996d76e-8ed9-4d83-ac8e-61841751f3d3");
+  const products = await getProducts({ isFeatured: true });  
+  const billboard = await getBillboard("0f9a4a5d-8d26-4ac1-83c3-7117fa3c17a2");
  
   return (
     <Container>
